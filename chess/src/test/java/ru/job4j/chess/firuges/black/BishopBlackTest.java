@@ -24,7 +24,7 @@ class BishopBlackTest {
     @Test
     void whenWayFromC1ToG5ThenSuccess() {
         BishopBlack bb = new BishopBlack(Cell.C1);
-        Cell[] expectedResult = new Cell[] {Cell.D2, Cell.E3, Cell.F4};
+        Cell[] expectedResult = new Cell[] {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         Cell[] result = bb.way(Cell.G5);
         assertArrayEquals(expectedResult, result);
     }
