@@ -23,8 +23,10 @@ public final class Logic {
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (Figure figure : figures) {
             for (Cell step : steps) {
-                if (figure.position() == step) {
-                    throw new OccupiedCellException();
+                if (figure.position().equals(step)) {
+                    throw new OccupiedCellException(
+                            String.format("Cell %s is occupied by another figure.", step)
+                    );
                 }
             }
         }
